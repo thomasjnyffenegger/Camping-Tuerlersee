@@ -10,7 +10,9 @@
 <meta property="og:image" content="assets/img/hero.jpg">
 <meta property="og:locale" content="de_CH">
 <link rel="icon" href="assets/img/logo.jpg">
-<link rel="preload" href="assets/fonts/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#16312a">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
 <header class="kopf">
   <div class="kopf-in">
     <a class="marke" href="index.html">
-      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="84" height="84">
+      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="52" height="52">
       <span><span class="marke-name">Camping &amp; Naturfreunde<br>Türlersee</span><span class="marke-claim">i de Natur dihei</span></span>
     </a>
     <button class="menu-knopf" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -27,6 +29,7 @@
         <li><a href="verein.html">Verein</a></li>
         <li><a href="aktivitaten.html">Aktivitäten</a></li>
         <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li class="nav-cta"><a href="verein.html#anmelden">Mitglied werden</a></li>
       </ul>
     </nav>
   </div>
@@ -34,75 +37,123 @@
 
 <main id="inhalt">
 <section class="hero">
-  <div class="hero-text">
-    <h1>Camping- und Naturfreunde Türlersee</h1>
-    <p>Campen im schönen<br>Zürcher Säuliamt</p>
+  <div class="hero-in">
+    <img src="assets/img/hero.jpg" alt="Luftaufnahme des Campingplatzes am Türlersee" width="1800" height="1012" fetchpriority="high">
+    <div class="hero-text">
+      <p class="label">Türlen · Hausen am Albis</p>
+      <h1>Campen am Türlersee – <em>i de Natur dihei</em></h1>
+      <p>Der Verein der Saison-Camperinnen und -Camper im schönen Zürcher Säuliamt. Seit 1974 pflegen wir Freundschaft, Zusammenhalt und unseren Platz am See.</p>
+      <div class="hero-knoepfe">
+        <a class="knopf frosch" href="aktivitaten.html">Jahresprogramm</a>
+        <a class="knopf hell ohne-pfeil" href="verein.html">Über den Verein</a>
+      </div>
+    </div>
   </div>
-  <div class="hero-bild"><img src="assets/img/hero.jpg" alt="Luftaufnahme des Campingplatzes am Türlersee" width="1408" height="1800" fetchpriority="high"></div>
 </section>
 
+<div class="fakten-leiste">
+  <ul>
+    <li><b>1974</b><span>gegründet</span></li>
+    <li><b>105</b><span>aktive Mitglieder</span></li>
+    <li><b>40.–</b><span>Jahresbeitrag</span></li>
+    <li><b>1</b><span>See zum Verlieben</span></li>
+  </ul>
+</div>
+
 <section class="abschnitt">
-  <div class="wrap kacheln">
-    <article class="kachel">
-      <h2>Verein</h2>
-      <a class="kachel-bild bg-gruen" href="verein.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 62 50 16h24c2 20 8 34 18 46H30Z"/><path d="M50 16c2 20 8 34 18 46"/><path d="M96 62V38m-7 8 7-8 7 8m-9 7 2-3 2 3"/><path d="M89 53l7-8 7 8"/><path d="M20 62V42m-6 7 6-7 6 7"/><path d="M6 66h108"/><path d="M12 60c-3-3-2-8 2-9-1 3 1 4 2 5 2-1 2-3 1-5 4 2 5 7 1 9"/></svg></a>
-      <p>In unserem Verein treffen sich Gleichgesinnte, um sich auszutauschen und die Freundschaft zu pflegen.</p>
-      <a class="knopf" href="verein.html">Mehr erfahren<span class="skip"> über den Verein</span></a>
-    </article>
-    <article class="kachel">
-      <h2>Aktivitäten</h2>
-      <a class="kachel-bild bg-rot" href="aktivitaten.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="46" cy="18" r="9"/><path d="M14 66c12-18 30-22 46-16 14 5 24 2 34-6 6-4 12-4 16-2"/><path d="M22 60V32m-7 8 7-8 7 8m-14 9 7-8 7 8"/><path d="M96 40V20m-7 8 7-8 7 8"/></svg></a>
-      <p>Alle Aktivitäten rund um den Verein und den Türlersee findet ihr auf dieser Seite.</p>
-      <a class="knopf rot" href="aktivitaten.html">Mehr erfahren<span class="skip"> über die Aktivitäten</span></a>
-    </article>
-    <article class="kachel">
-      <h2>Türlersee</h2>
-      <a class="kachel-bild bg-orange" href="tuerlersee.html" tabindex="-1" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle cx="60" cy="60" r="44"/><path d="M30 46c10-12 30-16 48-4 4 3 7 6 10 4-3 6-8 6-12 9-14 9-34 6-46-9Z"/><circle cx="56" cy="45" r="5"/><path d="M26 66c6-5 10-5 16 0s10 5 16 0 10-5 16 0 10 5 16 0"/><path d="M30 78c5-5 9-5 15 0s10 5 15 0 10-5 15 0 10 5 15 0"/><path d="M38 90c4-4 8-4 13 0s9 4 13 0 9-4 13 0"/></svg></a>
-      <p>Links und sonst noch Spannendes rund um den Türlersee und den Camping.</p>
-      <a class="knopf orange" href="tuerlersee.html">Mehr erfahren<span class="skip"> über den Türlersee</span></a>
-    </article>
+  <div class="wrap">
+    <div class="kopfzeile auftauchen">
+      <div>
+        <p class="label">Entdecken</p>
+        <h2 class="titel">Alles rund um unseren Verein</h2>
+      </div>
+    </div>
+    <div class="kacheln">
+      <article class="kachel auftauchen">
+        <div class="kachel-icon ton-frosch"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M30 62 50 16h24c2 20 8 34 18 46H30Z"/><path d="M50 16c2 20 8 34 18 46"/><path d="M96 62V38m-7 8 7-8 7 8"/><path d="M89 53l7-8 7 8"/><path d="M20 62V42m-6 7 6-7 6 7"/><path d="M6 66h108"/></svg></div>
+        <h2>Verein</h2>
+        <p>Gleichgesinnte, die sich austauschen und Freundschaft pflegen. Geschichte, Vorstand und Mitgliedschaft.</p>
+        <a class="kachel-link" href="verein.html">Mehr erfahren <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="kachel auftauchen">
+        <div class="kachel-icon ton-see"><svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="46" cy="18" r="9"/><path d="M14 66c12-18 30-22 46-16 14 5 24 2 34-6 6-4 12-4 16-2"/><path d="M22 60V32m-7 8 7-8 7 8m-14 9 7-8 7 8"/><path d="M96 40V20m-7 8 7-8 7 8"/></svg></div>
+        <h2>Aktivitäten</h2>
+        <p>Jassturnier, Schüürfäscht, Bingo, Seeputzete und vieles mehr – das ganze Jahresprogramm.</p>
+        <a class="kachel-link" href="aktivitaten.html">Zum Programm <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="kachel auftauchen">
+        <div class="kachel-icon ton-sand"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="60" cy="60" r="50"/><path d="M30 46c10-12 30-16 48-4 4 3 7 6 10 4-3 6-8 6-12 9-14 9-34 6-46-9Z"/><path d="M26 70c6-5 10-5 16 0s10 5 16 0 10-5 16 0 10 5 16 0"/><path d="M36 86c5-5 9-5 15 0s10 5 15 0 10-5 15 0"/></svg></div>
+        <h2>Türlersee</h2>
+        <p>Links und sonst noch Spannendes rund um den Türlersee und den Campingplatz.</p>
+        <a class="kachel-link" href="tuerlersee.html">Entdecken <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
   </div>
 </section>
 
 <section class="wrap" aria-label="Impressionen">
-  <div class="galerie">
-    <a class="g4" href="assets/img/galerie-1.jpg" data-lightbox><img src="assets/img/galerie-1.jpg" alt="Fröhliche Runde am Vereinsfest im Festzelt" loading="lazy"></a>
-    <a class="g8" href="assets/img/galerie-2.jpg" data-lightbox><img src="assets/img/galerie-2.jpg" alt="Morgenrot über dem frostigen Türlersee" loading="lazy"></a>
-    <a class="g8" href="assets/img/galerie-3.jpg" data-lightbox><img src="assets/img/galerie-3.jpg" alt="Tanzende Gäste am Vereinsfest" loading="lazy"></a>
-    <a class="g4" href="assets/img/galerie-4.jpg" data-lightbox><img src="assets/img/galerie-4.jpg" alt="Herbststimmung am Ufer des Türlersees" loading="lazy"></a>
+  <div class="kopfzeile auftauchen">
+    <div>
+      <p class="label">Impressionen</p>
+      <h2 class="titel">Feste, Freunde und Abendrot</h2>
+    </div>
+  </div>
+  <div class="galerie auftauchen">
+    <a class="g-a" href="assets/img/galerie-2.jpg" data-lightbox><img src="assets/img/galerie-2.jpg" alt="Morgenrot über dem frostigen Türlersee" loading="lazy"></a>
+    <a class="g-b" href="assets/img/galerie-1.jpg" data-lightbox><img src="assets/img/galerie-1.jpg" alt="Fröhliche Runde am Vereinsfest im Festzelt" loading="lazy"></a>
+    <a class="g-c" href="assets/img/galerie-3.jpg" data-lightbox><img src="assets/img/galerie-3.jpg" alt="Tanzende Gäste am Vereinsfest" loading="lazy"></a>
+    <a class="g-d" href="assets/img/galerie-4.jpg" data-lightbox><img src="assets/img/galerie-4.jpg" alt="Herbststimmung am Ufer des Türlersees" loading="lazy"></a>
   </div>
 </section>
 
 <section class="abschnitt">
   <div class="wrap">
-    <div class="zitat">
-      <span class="zitat-zeichen" aria-hidden="true">”</span>
+    <div class="zitat auftauchen">
       <p class="label">Zweck des Vereins</p>
-      <blockquote>Unser Ziel ist es, möglichst alle Saison-Camperinnen und Camper in unserem Verein zu haben um so den Zusammenhalt und die Freundschaft zu pflegen.</blockquote>
+      <span class="zitat-zeichen" aria-hidden="true">“</span>
+      <blockquote>Unser Ziel ist es, möglichst alle Saison-Camperinnen und Camper in unserem Verein zu haben, um so den Zusammenhalt und die Freundschaft zu pflegen.</blockquote>
     </div>
   </div>
 </section>
 
-<div class="wrap" style="padding-bottom:clamp(48px,8vw,96px)">
-  <div class="band" role="img" aria-label="Abendstimmung am Türlersee" style="background-image:url(assets/img/abendstimmung.jpg)"></div>
-</div>
+<section class="wrap">
+  <div class="cta-band auftauchen" style="background-image:url(assets/img/abendstimmung.jpg)">
+    <div>
+      <p class="label">Mitglied werden</p>
+      <h2>Mach mit – wir freuen uns auf dich!</h2>
+      <p>Für 40 Franken im Jahr bist du dabei: bei Festen, Turnieren und allem, was unseren Platz am See lebendig macht.</p>
+      <a class="knopf frosch" href="verein.html#anmelden">Jetzt anmelden</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer class="fuss">
-  <div class="fuss-kontakt">
-    <p class="label">Kontaktieren Sie uns</p>
-    <h2>Camping- und Naturfreunde Türlersee</h2>
-    <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+  <div class="fuss-in">
+    <div>
+      <div class="fuss-marke">
+        <img src="assets/img/logo.jpg" alt="" width="64" height="64">
+        <div><b>Camping- und Naturfreunde Türlersee</b><span>i de Natur dihei</span></div>
+      </div>
+      <p>Seit 1974 setzen wir uns für den Campingplatz am Türlersee und die Gemeinschaft der Saison-Camperinnen und -Camper ein.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+    </div>
+    <nav aria-label="Fusszeile">
+      <h2>Seiten</h2>
+      <ul>
+        <li><a href="verein.html">Verein</a></li>
+        <li><a href="aktivitaten.html">Aktivitäten</a></li>
+        <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li><a href="verein.html#anmelden">Mitglied werden</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="fuss-links">
-    <ul>
-      <li><a href="verein.html">Verein</a></li>
-      <li><a href="aktivitaten.html">Aktivitäten</a></li>
-      <li><a href="tuerlersee.html">Türlersee</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
+  <div class="fuss-unten">
     <p>© <span id="jahr">2026</span> Camping- und Naturfreunde Türlersee</p>
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </div>
 </footer>
 <script src="assets/js/main.js" defer></script>

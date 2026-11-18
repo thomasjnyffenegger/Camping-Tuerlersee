@@ -10,7 +10,9 @@
 <meta property="og:image" content="assets/img/hero.jpg">
 <meta property="og:locale" content="de_CH">
 <link rel="icon" href="assets/img/logo.jpg">
-<link rel="preload" href="assets/fonts/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#16312a">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
 <header class="kopf">
   <div class="kopf-in">
     <a class="marke" href="index.html">
-      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="84" height="84">
+      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="52" height="52">
       <span><span class="marke-name">Camping &amp; Naturfreunde<br>Türlersee</span><span class="marke-claim">i de Natur dihei</span></span>
     </a>
     <button class="menu-knopf" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -27,6 +29,7 @@
         <li><a href="verein.html" aria-current="page">Verein</a></li>
         <li><a href="aktivitaten.html">Aktivitäten</a></li>
         <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li class="nav-cta"><a href="verein.html#anmelden">Mitglied werden</a></li>
       </ul>
     </nav>
   </div>
@@ -34,52 +37,63 @@
 
 <main id="inhalt">
 <section class="seitenkopf">
-  <div class="wrap schmal">
-    <h1 class="label">Geschichte</h1>
-    <p class="lead" style="font-size:clamp(18px,1.9vw,22px);line-height:1.5">Im Jahr 1974 wollte der Kanton Zürich den damaligen Zeltplatz schliessen, da sich der Campingplatz im Naturschutzgebiet befindet. Um dieses zu verhindern, wurde seinerzeit der Verein Camping- und Naturfreunde Türlersee gegründet. Mit Erfolg kämpfte der Verein jahrelang um das Bestehen des Platzes. Mit dem Kauf des Areals durch die Gemeinde Hausen am Albis ist der Kampf nun ausgestanden und die Betriebskonzession bereitet uns keine Sorgen mehr.<br>Der Verein besteht aber weiterhin.</p>
-  </div>
+  <p class="label">Der Verein</p>
+  <h1>Gemeinsam für unseren Platz am See</h1>
+  <p class="lead">Geschichte, Zweck, Vorstand und Mitgliedschaft der Camping- und Naturfreunde Türlersee.</p>
 </section>
 
-<section class="split">
-  <div class="split-text bg-beige">
-    <h2 class="label">Zweck</h2>
-    <p>Unser Ziel ist es, möglichst alle Saison-Camperinnen und Camper in unserem Verein zu haben um so den Zusammenhalt und die Freundschaft zu pflegen.</p>
-  </div>
-  <div class="split-bild"><img src="assets/img/see-sonnenuntergang.jpg" alt="Sonnenuntergang über dem Türlersee" loading="lazy"></div>
-</section>
-
-<section class="split vorstand-zeile">
-  <a class="vorstand-bild zuerst" href="assets/img/vorstand.webp" data-lightbox><img src="assets/img/vorstand.webp" alt="Unser Vorstand – gemeinsam für unseren Campingplatz: Roger Lamm, Alex Koller, Ernst Nyffenegger, Stefanie Illitz, Heinz Wintsch und Thomas Nyffenegger" width="1672" height="941" loading="lazy"></a>
-  <div class="split-text">
-    <h2 class="label">Vorstand</h2>
-    <ul class="vorstand">
-      <li>Thomas Nyffenegger - <strong>Präsident</strong></li>
-      <li>Heinz Wintsch - <strong>Vizepräsident</strong></li>
-      <li>Ernst Nyffenegger - <strong>Kassier</strong></li>
-      <li>Roger Lamm - <strong>Aktuar</strong></li>
-      <li>Alex Koller - <strong>Kids + Aktivitäten</strong></li>
-      <li>Stefanie Illitz - <strong>Beisitzerin</strong></li>
-    </ul>
-  </div>
-</section>
-
-<section class="split">
-  <div class="split-text bg-salbei">
-    <h2 class="label">Mitglieder</h2>
-    <div class="zahlen">
-      <div class="zahl"><b>105</b><span>aktive Mitglieder (Stand: 2025)</span></div>
-      <div class="zahl"><b>40.-</b><span>Jahresbeitrag</span></div>
+<div class="wrap stapel">
+  <section class="geschichte auftauchen" aria-labelledby="geschichte-titel">
+    <div class="geschichte-jahr">1974<small>Gründungsjahr</small></div>
+    <div>
+      <h2 class="label" id="geschichte-titel">Geschichte</h2>
+      <p>Im Jahr 1974 wollte der Kanton Zürich den damaligen Zeltplatz schliessen, da sich der Campingplatz im Naturschutzgebiet befindet. Um dieses zu verhindern, wurde seinerzeit der Verein Camping- und Naturfreunde Türlersee gegründet. Mit Erfolg kämpfte der Verein jahrelang um das Bestehen des Platzes. Mit dem Kauf des Areals durch die Gemeinde Hausen am Albis ist der Kampf nun ausgestanden und die Betriebskonzession bereitet uns keine Sorgen mehr.</p>
+      <p>Der Verein besteht aber weiterhin.</p>
     </div>
-  </div>
-  <div class="split-bild"><img src="assets/img/see-herbst.jpg" alt="Herbstwald spiegelt sich im Türlersee" loading="lazy"></div>
-</section>
+  </section>
+
+  <section class="split auftauchen">
+    <div class="split-text dunkel">
+      <h2 class="label">Zweck</h2>
+      <p>Unser Ziel ist es, möglichst alle Saison-Camperinnen und Camper in unserem Verein zu haben, um so den Zusammenhalt und die Freundschaft zu pflegen.</p>
+    </div>
+    <div class="split-bild"><img src="assets/img/see-sonnenuntergang.jpg" alt="Sonnenuntergang über dem Türlersee" loading="lazy"></div>
+  </section>
+
+  <section class="split vorstand-zeile auftauchen">
+    <a class="vorstand-bild zuerst" href="assets/img/vorstand.webp" data-lightbox><img src="assets/img/vorstand.webp" alt="Unser Vorstand – gemeinsam für unseren Campingplatz: Roger Lamm, Alex Koller, Ernst Nyffenegger, Stefanie Illitz, Heinz Wintsch und Thomas Nyffenegger" width="1672" height="941" loading="lazy"></a>
+    <div class="split-text bg-weiss">
+      <h2 class="label">Vorstand</h2>
+      <ul class="vorstand">
+        <li><span>Thomas Nyffenegger</span><em>Präsident</em></li>
+        <li><span>Heinz Wintsch</span><em>Vizepräsident</em></li>
+        <li><span>Ernst Nyffenegger</span><em>Kassier</em></li>
+        <li><span>Roger Lamm</span><em>Aktuar</em></li>
+        <li><span>Alex Koller</span><em>Kids + Aktivitäten</em></li>
+        <li><span>Stefanie Illitz</span><em>Beisitzerin</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="split auftauchen">
+    <div class="split-text bg-frosch">
+      <h2 class="label">Mitglieder</h2>
+      <div class="zahlen">
+        <div class="zahl"><b>105</b><span>aktive Mitglieder (Stand: 2025)</span></div>
+        <div class="zahl"><b>40.–</b><span>Jahresbeitrag in Franken</span></div>
+      </div>
+    </div>
+    <div class="split-bild"><img src="assets/img/see-herbst.jpg" alt="Herbstwald spiegelt sich im Türlersee" loading="lazy"></div>
+  </section>
+</div>
 
 <section class="abschnitt" id="anmelden">
   <div class="wrap">
     <form class="formular" id="anmeldung">
+      <p class="label mitte" style="display:flex;justify-content:center">Mitglied werden</p>
       <h2>Anmeldung</h2>
-      <p class="mitte" style="font-family:var(--serif);font-size:19px">Wir freuen uns, dich/euch bei uns im Verein begrüssen zu dürfen.</p>
-      <p class="hinweis mitte" style="margin-top:14px"><strong>Bitte pro Person einzeln anmelden</strong> – nicht als Paar. Jede Person füllt ein eigenes Formular aus.</p>
+      <p class="einleitung">Wir freuen uns, dich/euch bei uns im Verein begrüssen zu dürfen.</p>
+      <p class="hinweis mitte"><strong>Bitte pro Person einzeln anmelden</strong> – nicht als Paar. Jede Person füllt ein eigenes Formular aus.</p>
       <div class="felder">
         <label class="feld">Vorname <input name="vorname" autocomplete="given-name"></label>
         <label class="feld">Nachname <input name="nachname" autocomplete="family-name"></label>
@@ -99,20 +113,31 @@
 </main>
 
 <footer class="fuss">
-  <div class="fuss-kontakt">
-    <p class="label">Kontaktieren Sie uns</p>
-    <h2>Camping- und Naturfreunde Türlersee</h2>
-    <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+  <div class="fuss-in">
+    <div>
+      <div class="fuss-marke">
+        <img src="assets/img/logo.jpg" alt="" width="64" height="64">
+        <div><b>Camping- und Naturfreunde Türlersee</b><span>i de Natur dihei</span></div>
+      </div>
+      <p>Seit 1974 setzen wir uns für den Campingplatz am Türlersee und die Gemeinschaft der Saison-Camperinnen und -Camper ein.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+    </div>
+    <nav aria-label="Fusszeile">
+      <h2>Seiten</h2>
+      <ul>
+        <li><a href="verein.html">Verein</a></li>
+        <li><a href="aktivitaten.html">Aktivitäten</a></li>
+        <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li><a href="verein.html#anmelden">Mitglied werden</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="fuss-links">
-    <ul>
-      <li><a href="verein.html">Verein</a></li>
-      <li><a href="aktivitaten.html">Aktivitäten</a></li>
-      <li><a href="tuerlersee.html">Türlersee</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
+  <div class="fuss-unten">
     <p>© <span id="jahr">2026</span> Camping- und Naturfreunde Türlersee</p>
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </div>
 </footer>
 <script src="assets/js/main.js" defer></script>

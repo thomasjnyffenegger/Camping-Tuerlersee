@@ -10,7 +10,9 @@
 <meta property="og:image" content="assets/img/hero.jpg">
 <meta property="og:locale" content="de_CH">
 <link rel="icon" href="assets/img/logo.jpg">
-<link rel="preload" href="assets/fonts/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/nunito-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="theme-color" content="#16312a">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
 <header class="kopf">
   <div class="kopf-in">
     <a class="marke" href="index.html">
-      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="84" height="84">
+      <img src="assets/img/logo.jpg" alt="Logo Camping Naturfreunde Türlersee" width="52" height="52">
       <span><span class="marke-name">Camping &amp; Naturfreunde<br>Türlersee</span><span class="marke-claim">i de Natur dihei</span></span>
     </a>
     <button class="menu-knopf" type="button" aria-controls="nav" aria-expanded="false" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -27,34 +29,47 @@
         <li><a href="verein.html">Verein</a></li>
         <li><a href="aktivitaten.html">Aktivitäten</a></li>
         <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li class="nav-cta"><a href="verein.html#anmelden">Mitglied werden</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
 <main id="inhalt">
-<section class="seitenkopf" style="padding-bottom:120px">
-  <h1 class="label gross">Seite nicht gefunden</h1>
+<section class="seitenkopf" style="padding-bottom:40px">
+  <p class="label">Fehler 404</p>
+  <h1>Hoppla – hier ist nur Wasser.</h1>
   <p class="lead" style="margin-bottom:32px">Diese Seite gibt es leider nicht (mehr).</p>
   <a class="knopf" href="index.html">Zur Startseite</a>
 </section>
 </main>
 
 <footer class="fuss">
-  <div class="fuss-kontakt">
-    <p class="label">Kontaktieren Sie uns</p>
-    <h2>Camping- und Naturfreunde Türlersee</h2>
-    <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+  <div class="fuss-in">
+    <div>
+      <div class="fuss-marke">
+        <img src="assets/img/logo.jpg" alt="" width="64" height="64">
+        <div><b>Camping- und Naturfreunde Türlersee</b><span>i de Natur dihei</span></div>
+      </div>
+      <p>Seit 1974 setzen wir uns für den Campingplatz am Türlersee und die Gemeinschaft der Saison-Camperinnen und -Camper ein.</p>
+    </div>
+    <div>
+      <h2>Kontakt</h2>
+      <address>Thomas Nyffenegger<br>Türlen 1<br>8915 Hausen am Albis</address>
+    </div>
+    <nav aria-label="Fusszeile">
+      <h2>Seiten</h2>
+      <ul>
+        <li><a href="verein.html">Verein</a></li>
+        <li><a href="aktivitaten.html">Aktivitäten</a></li>
+        <li><a href="tuerlersee.html">Türlersee</a></li>
+        <li><a href="verein.html#anmelden">Mitglied werden</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="fuss-links">
-    <ul>
-      <li><a href="verein.html">Verein</a></li>
-      <li><a href="aktivitaten.html">Aktivitäten</a></li>
-      <li><a href="tuerlersee.html">Türlersee</a></li>
-      <li><a href="impressum.html">Impressum</a></li>
-      <li><a href="datenschutz.html">Datenschutz</a></li>
-    </ul>
+  <div class="fuss-unten">
     <p>© <span id="jahr">2026</span> Camping- und Naturfreunde Türlersee</p>
+    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
   </div>
 </footer>
 <script src="assets/js/main.js" defer></script>

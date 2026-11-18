@@ -92,6 +92,19 @@
     ziel.innerHTML = html;
   }
 
+  // Sanftes Einblenden beim Scrollen
+  var teile = document.querySelectorAll(".auftauchen");
+  if ("IntersectionObserver" in window) {
+    var beob = new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("sichtbar"); beob.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    teile.forEach(function (t) { beob.observe(t); });
+  } else {
+    teile.forEach(function (t) { t.classList.add("sichtbar"); });
+  }
+
   // Anmeldeformular
   var form = document.getElementById("anmeldung");
   if (form) {
