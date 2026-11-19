@@ -10,6 +10,13 @@
  */
 window.EVENTS = [
   {
+    titel: "Mitgliederversammlung 2027",
+    start: "2027-07-23T18:30",
+    ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
+    kurz: "Zur Mitgliederversammlung 2027 vom Freitag, 23. Juli 2027 in der Schüür am Türlersee laden wir alle Mitglieder ganz herzlich ein.\nDie Versammlung beginnt um 18:30 Uhr.",
+    bilder: ["event-mv-2027.jpg"]
+  },
+  {
     titel: "Schüür Fäscht Türlersee",
     start: "2027-07-24T18:00", ende: "2027-07-24T23:59",
     ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
