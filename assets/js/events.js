@@ -10,6 +10,14 @@
  */
 window.EVENTS = [
   {
+    titel: "6. Jassturnier Türlersee",
+    start: "2027-06-18T18:00",
+    ort: "Campingplatz Restaurant Türlersee",
+    kurz: "Check-in 18:00 Uhr, Turnierstart 18:30 Uhr\nSchieber - Einzelwertung\nTeampartner werden ausgelost",
+    text: "Kosten: 20.- (Vereinsmitglieder Gratis)\n\nEs gibt viele Preise zu gewinnen.\nDer Jasskönig erhält den legendären Türlersee Jasskönig Wanderpokal.\n\nAnmeldeschluss ist der 06.06.2027",
+    bilder: ["event-jass-flyer-2027.jpg"]
+  },
+  {
     titel: "Mitgliederversammlung 2027",
     start: "2027-07-23T18:30",
     ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
