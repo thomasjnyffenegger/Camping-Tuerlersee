@@ -14,6 +14,9 @@
       var offen = nav.classList.toggle("offen");
       knopf.setAttribute("aria-expanded", offen ? "true" : "false");
     });
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) { nav.classList.remove("offen"); knopf.setAttribute("aria-expanded", "false"); }
+    });
   }
   if (kopf) {
     var onScroll = function () { kopf.classList.toggle("scrolled", window.scrollY > 8); };
@@ -142,9 +145,13 @@
           if (res.ok && String(res.j.success) === "true") {
             form.reset();
             melden("Herzlichen Dank" + (name ? ", " + name : "") + "! Deine Anmeldung ist bei uns angekommen. Wir melden uns bei dir.");
-          } else { perMail(f); }
+          } else {
+            // z. B. «This form needs Activation …» – dann muss der Empfänger das FormSubmit-Mail bestätigen
+            if (window.console) console.warn("Anmeldung: FormSubmit-Antwort", res.j);
+            perMail(f);
+          }
         })
-        .catch(function () { perMail(f); })
+        .catch(function (err) { if (window.console) console.warn("Anmeldung: Versand fehlgeschlagen", err); perMail(f); })
         .then(function () { sendKnopf.disabled = false; sendKnopf.textContent = "Anmeldung senden"; });
     });
   }
