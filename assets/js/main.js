@@ -1,10 +1,6 @@
 (function () {
   "use strict";
 
-  /* E-Mail-Adresse, an die das Anmeldeformular geschickt wird.
-     Ist sie leer, zeigt das Formular die Postadresse als Alternative. */
-  var ANMELDUNG_EMAIL = "thomas.j.nyffenegger@gmail.com";
-
   // Kopfzeile
   var kopf = document.querySelector(".kopf");
   var knopf = document.querySelector(".menu-knopf");
@@ -109,50 +105,17 @@
   }
 
   // Anmeldeformular
-  // Wird über FormSubmit (formsubmit.co) direkt an ANMELDUNG_EMAIL geschickt.
-  // Klappt das nicht, öffnet sich als Ersatz das E-Mail-Programm (mailto).
+  // Das Formular wird ganz normal an FormSubmit (formsubmit.co) geschickt – die Adresse steht
+  // in verein.html im action-Attribut. Hier werden nur Betreff und Danke-Seite ergänzt.
   var form = document.getElementById("anmeldung");
   if (form) {
-    var hinweis = document.getElementById("anmeldung-hinweis");
-    var sendKnopf = form.querySelector('button[type="submit"]');
-    var FELDER = [["Vorname", "vorname"], ["Nachname", "nachname"], ["E-Mail", "email"], ["Handy", "handy"], ["Geburtstag", "geburtstag"], ["Strasse", "strasse"], ["Postleitzahl", "plz"], ["Ort", "ort"], ["Platz Nummer", "platz"]];
-    var melden = function (text) { hinweis.hidden = false; hinweis.textContent = text; hinweis.focus(); };
-    var perMail = function (f) {
-      var zeilen = ["Anmeldung Camping- und Naturfreunde Türlersee", ""];
-      FELDER.forEach(function (p) { zeilen.push(p[0] + ": " + (f.get(p[1]) || "")); });
-      window.location.href = "mailto:" + ANMELDUNG_EMAIL + "?subject=" + encodeURIComponent("Anmeldung Verein") + "&body=" + encodeURIComponent(zeilen.join("\n"));
-      melden("Die Anmeldung konnte nicht direkt gesendet werden. Dein E-Mail-Programm öffnet sich mit der ausgefüllten Anmeldung – bitte dort auf «Senden» klicken.");
-    };
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var f = new FormData(form);
-      if (f.get("_honey")) return; // Spam-Schutz
-      if (!ANMELDUNG_EMAIL) {
-        melden("Die Online-Anmeldung ist noch nicht eingerichtet. Bitte melde dich direkt beim Vorstand oder per Post: Camping- und Naturfreunde Türlersee, Thomas Nyffenegger, Türlen 1, 8915 Hausen am Albis.");
-        return;
-      }
-      var name = ((f.get("vorname") || "") + " " + (f.get("nachname") || "")).trim();
-      var daten = { _subject: "Neue Anmeldung Verein" + (name ? ": " + name : ""), _template: "table", _replyto: f.get("email") || "" };
-      FELDER.forEach(function (p) { daten[p[0]] = f.get(p[1]) || ""; });
-      sendKnopf.disabled = true;
-      sendKnopf.textContent = "Wird gesendet …";
-      fetch("https://formsubmit.co/ajax/" + ANMELDUNG_EMAIL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(daten)
-      }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
-        .then(function (res) {
-          if (res.ok && String(res.j.success) === "true") {
-            form.reset();
-            melden("Herzlichen Dank" + (name ? ", " + name : "") + "! Deine Anmeldung ist bei uns angekommen. Wir melden uns bei dir.");
-          } else {
-            // z. B. «This form needs Activation …» – dann muss der Empfänger das FormSubmit-Mail bestätigen
-            if (window.console) console.warn("Anmeldung: FormSubmit-Antwort", res.j);
-            perMail(f);
-          }
-        })
-        .catch(function (err) { if (window.console) console.warn("Anmeldung: Versand fehlgeschlagen", err); perMail(f); })
-        .then(function () { sendKnopf.disabled = false; sendKnopf.textContent = "Anmeldung senden"; });
+    form.addEventListener("submit", function () {
+      var vor = form.elements["Vorname"], nach = form.elements["Nachname"];
+      var name = ((vor ? vor.value : "") + " " + (nach ? nach.value : "")).trim();
+      if (name) form.elements["_subject"].value = "Neue Anmeldung Verein: " + name;
+      form.elements["_next"].value = new URL("danke.html", window.location.href).href;
+      var k = form.querySelector('button[type="submit"]');
+      if (k) { k.textContent = "Wird gesendet …"; setTimeout(function () { k.disabled = true; }, 0); }
     });
   }
 })();

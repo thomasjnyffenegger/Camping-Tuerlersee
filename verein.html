@@ -89,25 +89,28 @@
 
 <section class="abschnitt" id="anmelden">
   <div class="wrap">
-    <form class="formular" id="anmeldung">
+    <form class="formular" id="anmeldung" action="https://formsubmit.co/thomas.j.nyffenegger@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Neue Anmeldung Verein">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://thomasjnyffenegger.github.io/Website/danke.html">
       <p class="label mitte" style="display:flex;justify-content:center">Mitglied werden</p>
       <h2>Anmeldung</h2>
       <p class="einleitung">Wir freuen uns, dich/euch bei uns im Verein begrüssen zu dürfen.</p>
       <p class="hinweis mitte"><strong>Bitte pro Person einzeln anmelden</strong> – nicht als Paar. Jede Person füllt ein eigenes Formular aus.</p>
       <div class="felder">
-        <label class="feld">Vorname <input name="vorname" autocomplete="given-name"></label>
-        <label class="feld">Nachname <input name="nachname" autocomplete="family-name"></label>
+        <label class="feld">Vorname <input name="Vorname" autocomplete="given-name"></label>
+        <label class="feld">Nachname <input name="Nachname" autocomplete="family-name"></label>
         <label class="feld breit">E-Mail * <input name="email" type="email" autocomplete="email" required></label>
-        <label class="feld">Handy <input name="handy" type="tel" autocomplete="tel"></label>
-        <label class="feld">Geburtstag <input name="geburtstag" type="date" autocomplete="bday"></label>
-        <label class="feld breit">Strasse <input name="strasse" autocomplete="street-address"></label>
-        <label class="feld">Postleitzahl <input name="plz" inputmode="numeric" autocomplete="postal-code"></label>
-        <label class="feld">Ort <input name="ort" autocomplete="address-level2"></label>
-        <label class="feld breit">Platz Nummer <input name="platz"></label>
+        <label class="feld">Handy <input name="Handy" type="tel" autocomplete="tel"></label>
+        <label class="feld">Geburtstag <input name="Geburtstag" type="date" autocomplete="bday"></label>
+        <label class="feld breit">Strasse <input name="Strasse" autocomplete="street-address"></label>
+        <label class="feld">Postleitzahl <input name="Postleitzahl" inputmode="numeric" autocomplete="postal-code"></label>
+        <label class="feld">Ort <input name="Ort" autocomplete="address-level2"></label>
+        <label class="feld breit">Platz Nummer <input name="Platz Nummer"></label>
         <label class="feld-falle" aria-hidden="true">Nicht ausfüllen <input name="_honey" tabindex="-1" autocomplete="off"></label>
       </div>
       <button class="knopf" type="submit">Anmeldung senden</button>
-      <p class="hinweis" id="anmeldung-hinweis" role="status" tabindex="-1" hidden></p>
+      <p class="klein mitte" style="margin:14px 0 0">Nach dem Absenden kann eine kurze Sicherheitsabfrage («Ich bin kein Roboter») erscheinen.</p>
     </form>
   </div>
 </section>
