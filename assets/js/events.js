@@ -10,6 +10,13 @@
  */
 window.EVENTS = [
   {
+    titel: "Bingo",
+    start: "2027-08-21T19:00", ende: "2027-08-21T21:00",
+    ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
+    kurz: "Türlersee Bingo - Im Restaurant nur bei schönem Wetter.\nCHF 2.- pro Karte. Geschenkkörbe zu gewinnen.",
+    bilder: ["event-bingo-2027.jpg"]
+  },
+  {
     titel: "5. Jassturnier Türlersee",
     start: "2026-06-19T18:00",
     ort: "Campingplatz Restaurant Türlersee",
