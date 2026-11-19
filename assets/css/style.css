@@ -189,6 +189,8 @@ p { margin: 0 0 1em; }
 .feld input:focus { border-color: var(--see); background: #fff; outline: none; box-shadow: 0 0 0 4px rgba(42,119,112,.15); }
 .formular .knopf { width: 100%; margin-top: 26px; padding: 17px; font-size: 17px; background: var(--frosch); color: var(--wald); }
 .hinweis { margin: 18px 0 0; padding: 14px 18px; background: var(--frosch-hell); border-radius: var(--r-klein); font-size: 16px; color: var(--wald); }
+.feld-falle { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.formular .knopf:disabled { opacity: .7; cursor: wait; transform: none; }
 .hinweis[hidden] { display: none; }
 .klein { font-size: 14px; color: var(--grau); }
 

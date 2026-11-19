@@ -106,24 +106,46 @@
   }
 
   // Anmeldeformular
+  // Wird über FormSubmit (formsubmit.co) direkt an ANMELDUNG_EMAIL geschickt.
+  // Klappt das nicht, öffnet sich als Ersatz das E-Mail-Programm (mailto).
   var form = document.getElementById("anmeldung");
   if (form) {
     var hinweis = document.getElementById("anmeldung-hinweis");
+    var sendKnopf = form.querySelector('button[type="submit"]');
+    var FELDER = [["Vorname", "vorname"], ["Nachname", "nachname"], ["E-Mail", "email"], ["Handy", "handy"], ["Geburtstag", "geburtstag"], ["Strasse", "strasse"], ["Postleitzahl", "plz"], ["Ort", "ort"], ["Platz Nummer", "platz"]];
+    var melden = function (text) { hinweis.hidden = false; hinweis.textContent = text; hinweis.focus(); };
+    var perMail = function (f) {
+      var zeilen = ["Anmeldung Camping- und Naturfreunde Türlersee", ""];
+      FELDER.forEach(function (p) { zeilen.push(p[0] + ": " + (f.get(p[1]) || "")); });
+      window.location.href = "mailto:" + ANMELDUNG_EMAIL + "?subject=" + encodeURIComponent("Anmeldung Verein") + "&body=" + encodeURIComponent(zeilen.join("\n"));
+      melden("Die Anmeldung konnte nicht direkt gesendet werden. Dein E-Mail-Programm öffnet sich mit der ausgefüllten Anmeldung – bitte dort auf «Senden» klicken.");
+    };
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var f = new FormData(form);
-      var zeilen = ["Anmeldung Camping- und Naturfreunde Türlersee", ""];
-      [["Vorname", "vorname"], ["Nachname", "nachname"], ["E-Mail", "email"], ["Handy", "handy"], ["Geburtstag", "geburtstag"], ["Strasse", "strasse"], ["Postleitzahl", "plz"], ["Ort", "ort"], ["Platz Nummer", "platz"]].forEach(function (p) {
-        zeilen.push(p[0] + ": " + (f.get(p[1]) || ""));
-      });
-      hinweis.hidden = false;
-      if (ANMELDUNG_EMAIL) {
-        window.location.href = "mailto:" + ANMELDUNG_EMAIL + "?subject=" + encodeURIComponent("Anmeldung Verein") + "&body=" + encodeURIComponent(zeilen.join("\n"));
-        hinweis.textContent = "Danke! Dein E-Mail-Programm öffnet sich mit der ausgefüllten Anmeldung – bitte dort noch auf «Senden» klicken.";
-      } else {
-        hinweis.textContent = "Die Online-Anmeldung ist noch nicht eingerichtet. Bitte melde dich direkt beim Vorstand oder per Post: Camping- und Naturfreunde Türlersee, Thomas Nyffenegger, Türlen 1, 8915 Hausen am Albis.";
+      if (f.get("_honey")) return; // Spam-Schutz
+      if (!ANMELDUNG_EMAIL) {
+        melden("Die Online-Anmeldung ist noch nicht eingerichtet. Bitte melde dich direkt beim Vorstand oder per Post: Camping- und Naturfreunde Türlersee, Thomas Nyffenegger, Türlen 1, 8915 Hausen am Albis.");
+        return;
       }
-      hinweis.focus();
+      var name = ((f.get("vorname") || "") + " " + (f.get("nachname") || "")).trim();
+      var daten = { _subject: "Neue Anmeldung Verein" + (name ? ": " + name : ""), _template: "table", _replyto: f.get("email") || "" };
+      FELDER.forEach(function (p) { daten[p[0]] = f.get(p[1]) || ""; });
+      sendKnopf.disabled = true;
+      sendKnopf.textContent = "Wird gesendet …";
+      fetch("https://formsubmit.co/ajax/" + ANMELDUNG_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(daten)
+      }).then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (res) {
+          if (res.ok && String(res.j.success) === "true") {
+            form.reset();
+            melden("Herzlichen Dank" + (name ? ", " + name : "") + "! Deine Anmeldung ist bei uns angekommen. Wir melden uns bei dir.");
+          } else { perMail(f); }
+        })
+        .catch(function () { perMail(f); })
+        .then(function () { sendKnopf.disabled = false; sendKnopf.textContent = "Anmeldung senden"; });
     });
   }
 })();

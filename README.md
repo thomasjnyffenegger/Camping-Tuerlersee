@@ -18,7 +18,7 @@ Statische Website des Vereins (reines HTML, CSS und JavaScript – kein Build n�
 - **Jahresprogramm (Tabelle):** direkt in `aktivitaten.html` die Tabellenzeilen anpassen.
 - **Neue Veranstaltung mit Details/Flyer:** in `assets/js/events.js` einen Block kopieren und anpassen.
   Kommende Anlässe erscheinen automatisch oben, vergangene im Archiv.
-- **Anmeldeformular:** in `assets/js/main.js` bei `ANMELDUNG_EMAIL` die Empfänger-Adresse eintragen.
+- **Anmeldeformular:** wird über [FormSubmit](https://formsubmit.co) direkt an die Adresse in `assets/js/main.js` (`ANMELDUNG_EMAIL`) geschickt. Nach einer Adressänderung kommt beim ersten Absenden ein Bestätigungs-Mail von FormSubmit – dort einmal auf «Activate» klicken.
 - **Vorstand / Mitgliederzahl:** direkt in `verein.html`.
 
 ## Veröffentlichen mit GitHub Pages
