@@ -10,6 +10,13 @@
  */
 window.EVENTS = [
   {
+    titel: "Schüür Fäscht Türlersee",
+    start: "2027-07-24T18:00", ende: "2027-07-24T23:59",
+    ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
+    kurz: "Apéro für Mitglieder ab 17:00 Uhr",
+    bilder: ["event-schuurfascht-2027.jpg"]
+  },
+  {
     titel: "Seeputzete",
     start: "2027-10-02T09:00", ende: "2027-10-02T12:00",
     ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
