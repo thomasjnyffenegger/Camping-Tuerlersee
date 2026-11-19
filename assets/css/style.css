@@ -140,6 +140,24 @@ p { margin: 0 0 1em; }
 .cta-band .label { color: var(--frosch); }
 .band { height: clamp(220px, 34vw, 460px); border-radius: calc(var(--r) + 8px); background: var(--sand-hell) center/cover no-repeat; }
 
+/* Froschfamilie */
+.frosch-tipp { max-width: 380px; margin: 0; color: var(--grau); font-size: 16px; }
+.frosch-familie { display: grid; gap: clamp(16px, 2.4vw, 28px); }
+.frosch-wechsel { font: inherit; color: inherit; border: 0; padding: 0; cursor: pointer; text-align: left; }
+.familie-bild { position: relative; display: block; width: 100%; max-width: 860px; margin: 0 auto; background: #fff; border-radius: calc(var(--r) + 6px); overflow: hidden; box-shadow: 0 1px 2px rgba(22,49,42,.05); }
+.familie-bild img { width: 100%; height: auto; }
+.frosch-wechsel .spass { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #fff; opacity: 0; transition: opacity .45s ease; }
+.frosch-wechsel:hover .spass, .frosch-wechsel:focus-visible .spass, .frosch-wechsel.an .spass { opacity: 1; }
+.frosch-logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 28px); }
+.frosch-karte { display: flex; flex-direction: column; align-items: center; background: #fff; border-radius: var(--r); padding: 22px 22px 24px; box-shadow: 0 1px 2px rgba(22,49,42,.05); transition: transform .25s, box-shadow .25s; text-align: center; }
+.frosch-karte:hover { transform: translateY(-4px); box-shadow: var(--schatten); }
+.frosch-bilder { position: relative; display: block; width: 100%; max-width: 260px; aspect-ratio: 1; }
+.frosch-bilder img { width: 100%; height: 100%; object-fit: contain; }
+.frosch-name { margin-top: 10px; display: block; }
+.frosch-name b { display: block; font-size: 20px; color: var(--wald); }
+.frosch-name em { display: block; font-style: normal; font-size: 15px; color: var(--grau); margin-top: 2px; }
+@media (max-width: 700px) { .frosch-logos { grid-template-columns: 1fr 1fr; } .frosch-logos > :last-child { grid-column: 1 / -1; } }
+
 /* ---------- Unterseiten-Kopf ---------- */
 .seitenkopf { text-align: center; padding: clamp(48px, 8vw, 104px) var(--rand) clamp(32px, 5vw, 56px); }
 .seitenkopf .label::before { display: none; }

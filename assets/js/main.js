@@ -104,6 +104,14 @@
     teile.forEach(function (t) { t.classList.add("sichtbar"); });
   }
 
+  // Froschfamilie: antippen wechselt zur Feierabend-Version
+  document.querySelectorAll(".frosch-wechsel").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var an = b.classList.toggle("an");
+      b.setAttribute("aria-pressed", an ? "true" : "false");
+    });
+  });
+
   // Anmeldeformular
   // Das Formular wird ganz normal an FormSubmit (formsubmit.co) geschickt – die Adresse steht
   // in verein.html im action-Attribut. Hier werden nur Betreff und Danke-Seite ergänzt.
