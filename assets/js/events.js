@@ -10,6 +10,12 @@
  */
 window.EVENTS = [
   {
+    titel: "Seeputzete",
+    start: "2027-10-02T09:00", ende: "2027-10-02T12:00",
+    ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
+    bilder: ["event-seeputzete-2027.jpg"]
+  },
+  {
     titel: "Kids - Mission Türlersee",
     start: "2027-08-14T13:30", ende: "2027-08-14T15:30",
     ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
