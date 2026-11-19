@@ -10,6 +10,13 @@
  */
 window.EVENTS = [
   {
+    titel: "Kids - Mission Türlersee",
+    start: "2027-08-14T13:30", ende: "2027-08-14T15:30",
+    ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
+    kurz: "Detektiv Mission - Für Kinder 4 bis 14 Jahre\nTreffpunkt: Hauptquartier in der Kurve",
+    bilder: ["event-kids-mission-2027.jpg"]
+  },
+  {
     titel: "Bingo",
     start: "2027-08-21T19:00", ende: "2027-08-21T21:00",
     ort: "Camping Türlersee, Türlen 1, 8915 Hausen am Albis",
